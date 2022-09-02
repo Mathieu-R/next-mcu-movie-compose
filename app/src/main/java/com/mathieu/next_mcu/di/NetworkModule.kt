@@ -15,11 +15,16 @@ import javax.inject.Singleton
 object NetworkModule {
   @Singleton
   @Provides
-  fun provideMCUApi(): MCUApi {
+  fun provideRetrofit(): Retrofit {
     return Retrofit.Builder()
       .baseUrl(Constants.API_URL)
       .addConverterFactory(GsonConverterFactory.create())
       .build()
-      .create(MCUApi::class.java)
+  }
+
+  @Singleton
+  @Provides
+  fun providesMCUApi(retrofit: Retrofit): MCUApi {
+    return retrofit.create(MCUApi::class.java)
   }
 }
