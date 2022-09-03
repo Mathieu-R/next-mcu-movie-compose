@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.mathieu.next_mcu.ui.theme.NextmcuTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
 fun Home(
   viewModel: MainViewModel = hiltViewModel()
 ) {
-
+  
 }
 
 @Preview(showBackground = true)
