@@ -1,6 +1,7 @@
 package com.mathieu.next_mcu
 
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,7 +14,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
   private val MCURepository: MCURepository
 ): ViewModel() {
-  private val nextMCUMovie: MutableState<CustomResponse<NextMCUMovie>>? = null
+  private val nextMCUMovie: MutableLiveData<CustomResponse<NextMCUMovie>> = MutableLiveData()
 
   init {
     getNextMCUMovie()
@@ -21,7 +22,7 @@ class MainViewModel @Inject constructor(
 
   private fun getNextMCUMovie() {
     viewModelScope.launch {
-      nextMCUMovie?.value = MCURepository.getNextMCUMovie()
+      nextMCUMovie.value = MCURepository.getNextMCUMovie()
     }
   }
 }
