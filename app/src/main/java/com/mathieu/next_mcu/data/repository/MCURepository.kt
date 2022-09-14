@@ -1,13 +1,13 @@
-package com.mathieu.next_mcu.repository
+package com.mathieu.next_mcu.data.repository
 
 import com.mathieu.next_mcu.data.CustomResponse
-import com.mathieu.next_mcu.model.NextMCUMovie
-import com.mathieu.next_mcu.network.MCUApi
-import com.mathieu.next_mcu.network.handleApi
+import com.mathieu.next_mcu.data.model.NextMCUMovie
+import com.mathieu.next_mcu.di.network.IMCUApi
+import com.mathieu.next_mcu.di.network.handleApi
 import javax.inject.Inject
 
 class MCURepository @Inject constructor(
-  private val MCUApi: MCUApi
+  private val MCUApi: IMCUApi
 ) {
 
   suspend fun getNextMCUMovie(): CustomResponse<NextMCUMovie> {

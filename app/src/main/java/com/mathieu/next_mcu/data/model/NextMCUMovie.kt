@@ -1,7 +1,8 @@
-package com.mathieu.next_mcu.model
+package com.mathieu.next_mcu.data.model
 
-data class FollowingProduction(
+data class NextMCUMovie(
     val days_until: Int,
+    val following_production: FollowingProduction,
     val overview: String,
     val poster_url: String,
     val release_date: String,

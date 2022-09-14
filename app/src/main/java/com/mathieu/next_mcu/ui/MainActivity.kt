@@ -1,4 +1,4 @@
-package com.mathieu.next_mcu
+package com.mathieu.next_mcu.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

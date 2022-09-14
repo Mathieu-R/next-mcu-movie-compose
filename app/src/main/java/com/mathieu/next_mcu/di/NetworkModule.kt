@@ -1,6 +1,6 @@
 package com.mathieu.next_mcu.di
 
-import com.mathieu.next_mcu.network.MCUApi
+import com.mathieu.next_mcu.di.network.IMCUApi
 import com.mathieu.next_mcu.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -24,7 +24,7 @@ object NetworkModule {
 
   @Singleton
   @Provides
-  fun providesMCUApi(retrofit: Retrofit): MCUApi {
-    return retrofit.create(MCUApi::class.java)
+  fun providesMCUApi(retrofit: Retrofit): IMCUApi {
+    return retrofit.create(IMCUApi::class.java)
   }
 }

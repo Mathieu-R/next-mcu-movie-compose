@@ -1,13 +1,11 @@
-package com.mathieu.next_mcu
+package com.mathieu.next_mcu.ui
 
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mathieu.next_mcu.data.CustomResponse
-import com.mathieu.next_mcu.model.NextMCUMovie
-import com.mathieu.next_mcu.repository.MCURepository
+import com.mathieu.next_mcu.data.model.NextMCUMovie
+import com.mathieu.next_mcu.data.repository.MCURepository
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

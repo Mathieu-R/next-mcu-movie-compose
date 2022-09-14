@@ -1,6 +1,5 @@
-package com.mathieu.next_mcu.network
+package com.mathieu.next_mcu.di.network
 
-import com.google.gson.JsonObject
 import com.google.gson.JsonSyntaxException
 import com.mathieu.next_mcu.data.CustomResponse
 import org.json.JSONObject
